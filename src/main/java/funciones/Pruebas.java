@@ -18,7 +18,7 @@ public class Pruebas {
         //nombres.stream().forEach(x -> System.out.println(x.toUpperCase()));
         Stream<String> resultado = nombres.stream()
                 .map(x -> x.toUpperCase())
-                .filter(x -> x.startsWith("P"));
+                .filter(x -> x.startsWith("J"));
 
         resultado.forEach(x -> System.out.println(x));
 
@@ -26,6 +26,11 @@ public class Pruebas {
         IntStream numsStream = Arrays.stream(numeros);
         numsStream.filter(x -> x%2 == 0)
                 .forEach(x -> System.out.println(x));
+
+        Stream<String> nombresRepes =nombres.stream()
+                .filter(x -> x.equals("Pepe"))
+                .map(x -> x.toUpperCase());
+        nombresRepes.forEach(x -> System.out.println(x));
 
     }
 }
